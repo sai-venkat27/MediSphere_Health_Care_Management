@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Sidebar from './components/Sidebar';
+import Sidebar from './Components/Sidebar';
 import Login from './views/Login';
 import Overview from './views/Overview';
 import DoctorsManager from './views/DoctorsManager';
