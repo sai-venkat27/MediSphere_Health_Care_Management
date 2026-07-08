@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Sidebar from './Components/Sidebar';
+import Sidebar from './components/SideBar';
 import Login from './views/Login';
 import Overview from './views/Overview';
 import DoctorsManager from './views/DoctorsManager';
@@ -80,7 +80,7 @@ export default function App() {
   }
 
   return (
-    <div className="flex min-h-screen bg-slate-50 text-slate-800 font-sans">
+    <div className="flex flex-col lg:flex-row min-h-screen bg-slate-50 text-slate-800 font-sans">
       <Sidebar currentView={currentView} setCurrentView={setCurrentView} setIsAuthenticated={setIsAuthenticated} />
       <main className="flex-1 p-8 overflow-y-auto">
         {currentView === 'overview' && <Overview totalDoctors={doctors.length} totalPatients={patients.length} activeAppointments={appointments.filter(a => a.status === 'CONFIRMED').length} />}
